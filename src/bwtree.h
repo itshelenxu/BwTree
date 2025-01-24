@@ -191,6 +191,7 @@ extern bool print_flag;
  * class BwTreeBase - Base class of BwTree that stores some common members
  */
 class BwTreeBase {
+  public:
   // This is the presumed size of cache line
   static constexpr size_t CACHE_LINE_SIZE = 64;
   
@@ -305,7 +306,7 @@ class BwTreeBase {
                 "class PaddedGCMetadata size does"
                 " not conform to the alignment!");
  
- private: 
+ public: 
   // This is used as the garbage collection ID, and is maintained in a per
   // thread level
   // This is initialized to -1 in order to distinguish between registered 
